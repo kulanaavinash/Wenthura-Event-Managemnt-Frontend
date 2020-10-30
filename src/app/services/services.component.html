@@ -1,0 +1,40 @@
+<h3 style="padding: 100px;">Wenthura Event Management Services List</h3>
+
+<div class="alert alert-success" role="alert" *ngIf='massage'>{{massage}}</div>
+<div class="container" style="padding-bottom: 250px;padding-left: 20px;">
+    <table class="table">
+        <thead>
+            <tr>
+                <!-- <th>Id</th> -->
+                <th>Name</th>
+                <th>Package</th>
+                <th>Status</th>
+                <th>Image</th>
+                <th>Action</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let service of services">
+                <!-- <td>{{service.serId}}</td> -->
+                <td>{{service.serName}}</td>
+                <td>{{service.pacName}}</td>
+                <td>{{service.serStatus}}</td>
+                <td>
+                    <div class="container row">
+                        <div class="col-md-12">
+                            <div *ngIf="service.picByte">
+                                <img style="width: 100px;" [src]="format(service.picByte)">
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td><button class="btn btn-warning" (click)="deleteService(service.serId)">Delete Services</button></td>
+                <td><button class="btn btn-info" (click)="updateService(service.serId)">Update Services</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="btn btn-success" (click)=addTodo()>Add Services</button>
+
+</div>

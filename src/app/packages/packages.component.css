@@ -1,0 +1,53 @@
+.platinum {
+    background-image: url('http://universaltsg.com/wp-content/uploads/2016/03/platinum-package.png');
+    background-size: cover;
+    border-radius: 12px;
+    width: 280px;
+    height: 250px;
+    font-size: 24px;
+    padding: 32px 16px;
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+    text-align: center;
+}
+
+.platinum:hover {
+    background-color: #555555;
+}
+
+.gold {
+    background-image: url('https://i0.wp.com/harlequinjhb.co.za/wp-content/uploads/2018/05/Gold-Package-1-1.png?fit=600%2C600&ssl=1');
+    background-size: cover;
+    border-radius: 12px;
+    width: 280px;
+    height: 250px;
+    font-size: 24px;
+    padding: 32px 16px;
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+    text-align: center;
+}
+
+.gold:hover {
+    background-color: #555555;
+}
+
+.silver {
+    background-image: url('https://newvideomarketing.com/wp-content/uploads/2017/02/silver-package.png');
+    background-size: cover;
+    border-radius: 12px;
+    width: 280px;
+    height: 250px;
+    font-size: 24px;
+    padding: 32px 16px;
+    background-color: white;
+    color: black;
+    border: 2px solid #e7e7e7;
+    text-align: center;
+}
+
+.silver:hover {
+    background-color: #555555;
+}

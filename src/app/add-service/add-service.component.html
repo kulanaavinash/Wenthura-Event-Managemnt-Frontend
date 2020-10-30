@@ -1,0 +1,61 @@
+<h3 style="padding: 100px;">List of the Services</h3>
+
+<div class="alert alert-danger" role="alert" *ngIf='errorSubmitMassage'>{{errorSubmitMassage}}</div>
+
+<div class="container" style="padding: 20px;">
+    <form (ngSubmit)="!userForm.invalid && saveService()" #userForm="ngForm">
+        <fieldset class="form-group">
+            <label>Service Name</label>
+            <input type="text" [(ngModel)]="service.serName" class="form-control" name="serName" required="required">
+        </fieldset>
+        <fieldset class="form-group">
+            <label>Service Description</label>
+            <input type="text" [(ngModel)]="service.serDesc" class="form-control" name="serDesc" required="required">
+        </fieldset>
+        <fieldset class="form-group">
+            <label>Package</label>
+            <select class="custom-select my-1 mr-sm-2" [(ngModel)]="service.pacName" name="pacName">
+                <option value="">Choose Package</option>
+                <option value="platinum">Platinum</option>
+                <option value="gold">Gold</option>
+                <option value="silver">Silver</option>
+             </select>
+            <!-- <input type="text" [(ngModel)]="service.pacName" class="form-control" name="pacName" required="required"> -->
+        </fieldset>
+        <fieldset class="form-group">
+            <label>Status</label>
+            <select class="custom-select my-1 mr-sm-2" [(ngModel)]="service.serStatus" name="serStatus">
+                <option value="">Choose Status</option>
+                <option value="ACT">Active</option>
+                <option value="DAC">Inactive</option>
+             </select>
+            <!-- <input type="text" [(ngModel)]="service.serStatus" class="form-control" name="serStatus" required="required"> -->
+        </fieldset>
+        <fieldset class="form-group">
+            <label>Offer</label>
+            <input type="text" [(ngModel)]="service.serOffer" class="form-control" name="serOffer" required="required">
+        </fieldset>
+
+        <div class="alert alert-warning" role="alert" *ngIf='uploadState'>{{errorMassage}}</div>
+        <fieldset class="form-group">
+            <label>Image</label>
+            <!-- <input type="file" (change)="onFileSelect($event)" class="form-control" name="serImg" required="required"> -->
+            <!-- <input type="text" [(ngModel)]="service.serImg" class="form-control" name="serImg" required="required"> -->
+            <!-- <app-image-upload></app-image-upload> -->
+            <div class="col-md-6">
+                <input type="file" (change)="onFileSelect($event)">
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="container row">
+                <div class="col-md-12">
+                    <div *ngIf=retrievedImage>
+                        <img [src]="retrievedImage">
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <button type="submit" class="btn btn-success">Save Service</button>
+    </form>
+</div>

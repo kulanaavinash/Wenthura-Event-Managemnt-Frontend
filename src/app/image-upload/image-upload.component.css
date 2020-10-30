@@ -1,0 +1,33 @@
+.btn-bwm {
+    color: #000;
+    background-color: rgb(243, 62, 17);
+    border-color: gray;
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+  
+    /* &:hover, &:focus, &:active {
+      border-color: $main-color !important;
+      background-color: $main-color !important;
+    } */
+  }
+
+  /* input{
+      display: none;
+  } */
+
+  .image-upload-container{
+    cursor: pointer;
+  }
+
+  .image-preview-container{
+    background-color: #f7f7f7;
+    position: relative;
+  }
+
+  .image-preview{
+    background: center center no-repeat;
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+  }
